@@ -5,7 +5,7 @@ if __name__ == "__main__":
     sc = SparkContext("local[3]", "word count") 
     sc.setLogLevel("ERROR")
 
-    lines = sc.textFile("in/word_count.text")
+    lines = sc.textFile("python/in/word_count.text")
 
     words = lines.flatMap(lambda line: line.split(" "))
 
